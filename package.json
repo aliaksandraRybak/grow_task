@@ -1,0 +1,17 @@
+{
+  "name": "grow_task",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "sass --watch scss/base.scss style.css"
+  },
+  "author": "Aliaksandra Rybak",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.20.1"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.9.0"
+  }
+}
