@@ -1,0 +1,33 @@
+.map {
+  padding: 20px 0 35px;
+  text-align: center;
+  background-color: $color-gray;
+
+  &-info {
+    h3 {
+      font-size: 27px;
+      font-family: "AGLettericaBold", sans-serif;
+      color: #4690b4;
+    }
+
+    p {
+      margin-bottom: 15px;
+
+      font-size: 17px;
+      font-family: "ColabRegular", sans-serif;
+      color: #6ab5d0;
+    }
+  }
+
+  &-wrapper {
+    padding: 0 10px;
+
+    @media (min-width: $bp-xl) {
+      padding: 0;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}

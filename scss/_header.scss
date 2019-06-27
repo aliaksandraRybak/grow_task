@@ -1,0 +1,160 @@
+$burger-top-value: 7px;
+$burger-height-value: 2px;
+
+header {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 80px;
+  padding: 20px;
+
+  background-color: $color-light-blue;
+
+  @media (min-width: $bp-md) {
+    align-items: center;
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: $bp-lg) {
+    position: static;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 865px;
+    height: 105px;
+    margin: -53px auto 70px;
+    padding: 5px;
+
+    background-color: $color-light-blue;
+    transform: rotate(-2deg);
+    border-radius: 10px;
+  }
+
+  @media (min-width: $bp-xl) {
+    margin-bottom: 95px;
+  }
+
+  .logo {
+    position: absolute;
+    top: -30px;
+    left: 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 30px 10px 10px;
+
+    color: #299fca;
+    text-align: center;
+    background-color: $color-gray;
+    border: 5px solid #ffffff;
+    border-radius: 15px;
+    transform: rotate(-4deg);
+    box-shadow: 0 10px 10px -10px $color-dark-blue;
+
+    h1 {
+      margin-bottom: 0;
+      font-size: 30px;
+      font-family: "PassionOneBold", sans-serif;
+
+    }
+
+    p {
+      margin: 0;
+
+      font-family: 'Arial', sans-serif;
+    }
+
+    @media (min-width: $bp-md) {
+      padding: 35px 15px 15px;
+
+      h1 {
+        font-size: 40px;
+      }
+    }
+
+    @media (min-width: $bp-lg) {
+      position: relative;
+      top: 25px;
+      left: 0;
+    }
+  }
+
+  ul {
+    display: none;
+
+    font-family: "AGSouvenir", serif;
+
+    @media (min-width: $bp-md) {
+      display: block;
+
+      li {
+        display: inline-block;
+        margin-right: 25px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      color: #ffffff;
+      list-style-type: none;
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+
+    @media (min-width: $bp-lg) {
+      padding-bottom: 13px;
+      transform: rotate(2deg);
+
+      li {
+        margin-right: 50px;
+      }
+    }
+  }
+
+  .mob-nav-control {
+    width: 25px;
+    height: calc(#{$burger-height-value} + 2 * #{$burger-top-value});
+
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    @media (min-width: $bp-md) {
+      display: none;
+    }
+
+    span {
+      position: absolute;
+      right: 20px;
+
+      &,
+      &:before,
+      &:after {
+        width: 25px;
+        height: $burger-height-value;
+        background-color: #ffffff;
+        border-radius: 5px;
+      }
+
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        display: block;
+      }
+
+      &:before {
+        top: -$burger-top-value;
+      }
+
+      &:after {
+        top: $burger-top-value;
+      }
+    }
+  }
+}
