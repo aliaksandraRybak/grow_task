@@ -269,7 +269,7 @@ $slider-control-size: 42px;
           background-position: 15px calc(100% - 65px);
         }
 
-        p {
+        h3 {
           margin-right: 50%;
           margin-bottom: 15px;
 
@@ -411,6 +411,7 @@ $slider-control-size: 42px;
 
           font-size: 29px;
           font-family: "ABodoniNovaNrItalic", serif;
+          font-weight: normal;
 
           @media (min-width: $bp-xl) {
             margin-bottom: 25px;

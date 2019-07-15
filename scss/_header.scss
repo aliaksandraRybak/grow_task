@@ -2,36 +2,38 @@ $burger-top-value: 7px;
 $burger-height-value: 2px;
 
 header {
-  position: relative;
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 80px;
-  padding: 20px;
-
-  background-color: $color-light-blue;
-
-  @media (min-width: $bp-md) {
-    align-items: center;
-    margin-bottom: 70px;
-  }
-
-  @media (min-width: $bp-lg) {
-    position: static;
+  .header-wrapper {
+    position: relative;
     display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
-    width: 865px;
-    height: 105px;
-    margin: -53px auto 70px;
-    padding: 5px;
+    justify-content: flex-end;
+    margin-bottom: 80px;
+    padding: 20px;
 
     background-color: $color-light-blue;
-    transform: rotate(-2deg);
-    border-radius: 10px;
-  }
 
-  @media (min-width: $bp-xl) {
-    margin-bottom: 95px;
+    @media (min-width: $bp-md) {
+      align-items: center;
+      margin-bottom: 70px;
+    }
+
+    @media (min-width: $bp-lg) {
+      position: static;
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-end;
+      width: 865px;
+      height: 105px;
+      margin: -53px auto 70px;
+      padding: 5px;
+
+      background-color: $color-light-blue;
+      transform: rotate(-2deg);
+      border-radius: 10px;
+    }
+
+    @media (min-width: $bp-xl) {
+      margin-bottom: 95px;
+    }
   }
 
   .logo {
@@ -80,38 +82,43 @@ header {
     }
   }
 
-  ul {
-    display: none;
+  nav {
+    @media (min-width: $bp-lg) {
+      transform: rotate(2deg);
+    }
 
-    font-family: "AGSouvenir", serif;
+    ul {
+      display: none;
 
-    @media (min-width: $bp-md) {
-      display: block;
+      font-family: "AGSouvenir", serif;
 
-      li {
-        display: inline-block;
-        margin-right: 25px;
+      @media (min-width: $bp-md) {
+        display: block;
 
-        &:last-child {
-          margin-right: 0;
+        li {
+          display: inline-block;
+          margin-right: 25px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+
+        color: #ffffff;
+        list-style-type: none;
+
+        a {
+          color: inherit;
+          text-decoration: none;
         }
       }
 
-      color: #ffffff;
-      list-style-type: none;
+      @media (min-width: $bp-lg) {
+        padding-bottom: 13px;
 
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-    }
-
-    @media (min-width: $bp-lg) {
-      padding-bottom: 13px;
-      transform: rotate(2deg);
-
-      li {
-        margin-right: 50px;
+        li {
+          margin-right: 50px;
+        }
       }
     }
   }
